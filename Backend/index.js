@@ -5,15 +5,9 @@ import dotenv from "dotenv";
 import { errorMiddleware } from "./error/error.js";
 import { dbConnection } from "./database/dbConnection.js";
 import reservationRouter from "./routes/reservationRoute.js";
-
 dotenv.config({ path: "./config/config.env" });
 
-const corsOrigin ={
-    origin: ["http://localhost:5173"],
-    methods: ["POST"],
-    credentials: true,        
-}
-app.use(cors(corsOrigin));
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
