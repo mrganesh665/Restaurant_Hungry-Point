@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1/reservation", reservationRouter);
 
 app.get('/', (req, res)=>{
-    res.send("Hello world")
+    res.status.send("Hello world")
 })
 
 dbConnection();
