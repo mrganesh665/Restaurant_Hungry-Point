@@ -22,7 +22,7 @@ const Reservation = () => {
     e.preventDefault();
     try {
       // console.log("Response from server:", data);
-      axios.post("http://localhost:4000/api/v1/reservation/send", { firstName, lastName, email, phone, date, time },
+      axios.post("https://hungry-point.onrender.com/api/v1/reservation/send", { firstName, lastName, email, phone, date, time },
         {
           headers: {
             "Content-Type": "application/json",
